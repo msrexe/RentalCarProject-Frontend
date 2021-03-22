@@ -1,0 +1,16 @@
+<div *ngIf="dataLoaded == false" class="spinner-grow" role="status">
+</div>
+<table *ngIf="dataLoaded" class="table">
+  <thead>
+    <tr>
+      <th scope="col">Brand ID</th>
+      <th scope="col">Brand Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let brand of brands">
+      <th scope="row">{{brand.id}}</th>
+      <td>{{brand.name}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<div *ngIf="dataLoaded == false" class="spinner-grow" role="status">
+</div>
+<table *ngIf="dataLoaded" class="table">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Car Brand</th>
+      <th scope="col">Color</th>
+      <th scope="col">Model Year</th>
+      <th scope="col">Daily Price</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <th scope="row">{{car.description}}</th>
+      <td>{{car.brandName}}</td>
+      <td>{{car.colorName}}</td>
+      <td>{{car.modelYear}}</td>
+      <td>{{car.dailyPrice}} TL</td>
+    </tr>
+  </tbody>
+</table>
