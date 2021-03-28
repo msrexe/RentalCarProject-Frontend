@@ -3,21 +3,18 @@
 <table *ngIf="dataLoaded" class="table">
   <thead>
     <tr>
-      <th scope="col">Description</th>
-      <th scope="col">Car Brand</th>
-      <th scope="col">Color</th>
-      <th scope="col">Model Year</th>
-      <th scope="col">Daily Price</th>
-
+      <th scope="col">Araç Markası</th>
+      <th scope="col">Renk</th>
+      <th scope="col">Günlük Ücret</th>
+      <th scope="col">Detay</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let car of cars">
-      <th scope="row">{{car.description}}</th>
       <td>{{car.brandName}}</td>
       <td>{{car.colorName}}</td>
-      <td>{{car.modelYear}}</td>
       <td>{{car.dailyPrice}} TL</td>
+      <td><button type="button" [routerLink] ="['/cars/getcardetails/' + car.carId]" class="btn btn-info">Göster</button></td>
     </tr>
   </tbody>
 </table>

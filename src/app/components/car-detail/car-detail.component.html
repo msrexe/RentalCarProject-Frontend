@@ -1,0 +1,23 @@
+<div class="container">
+  <div *ngIf="!imageLoaded" class="spinner-grow" role="status"></div>
+  <div *ngFor="let carImage of carImages">
+    <img src="https://localhost:44334/Images/{{carImage.imagePath}}" class="rounded img-fluid" alt="vehicle_image" />
+  </div>
+</div>
+
+<div class="container">
+  <div *ngIf="!dataLoaded" class="spinner-grow" role="status"></div>
+  <div *ngFor="let carDetail of carDetails" class="row">
+    <div class="col-md-5">
+      <h4>
+        <strong>{{ carDetail.brandName }}</strong>
+      </h4>
+      <h5>Açıklama : {{ carDetail.description }}</h5>
+      <h6>Renk : {{ carDetail.colorName }}</h6>
+      <h6>Model Yılı : {{ carDetail.modelYear }}</h6>
+    </div>
+    <div class="col-md-7">
+        <h3>Fiyat (Günlük) : {{ carDetail.dailyPrice }} TL</h3>
+    </div>
+  </div>
+</div>
